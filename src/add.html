@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/add.css">
+</head>
+<body>
+    <p class="notify">Notify me when BTC reaches...</p>
+    <div class="row2">
+        <input type="text" id="notify-val" placeholder="USD">
+        <button id="update-btn">Update</button>
+    </div>
+
+    <a id="close-btn">Close Window</a>
+
+    <script src="js/add.js"></script>
+</body>
+</html>

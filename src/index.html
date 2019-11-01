@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>BTC Tracker</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <div class="row">
+        <div id="price-container">
+            <p class="subtext">Current BTC USD</p>
+            <h1 id="price">Loading...</h1>
+        </div>
+        <div id="goal-container">
+            <p>
+                <img src="../assets/images/up.svg">
+                <span id="target-price">Choose a Target Price</span>
+            </p>
+        </div>
+        <div id="right-container">
+            <button id="notify-btn">Notify me when...</button>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
