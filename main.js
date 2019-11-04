@@ -1,9 +1,16 @@
 const path = require("path");
 const { app, BrowserWindow, Menu, shell, ipcMain } = require("electron");
+const handleSquirrelEvent = require('./handle-squirrel-event');
 
 // Keep a global reference of the window object, if you don't the window will
 // be closed automatically when the javascript object is garbage collected.
 let win;
+
+// this should be placed at top of main.js to handle setup events quickly
+if (handleSquirrelEvent(app)) {
+  // squirrel event handled and app will exit in 1000ms, so don't do anything else
+  return;
+}
 
 function createWindow() {
   // Create the browser window.
