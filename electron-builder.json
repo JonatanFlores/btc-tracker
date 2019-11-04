@@ -1,5 +1,5 @@
 {
-  "appId": "br.com.btc-tracker", 
+  "appId": "br.com.btc-tracker",
   "nsis": {
     "oneClick": false,
     "installerIcon": "assets/icons/win/icon.ico",
@@ -7,7 +7,10 @@
     "installerHeader": "assets/icons/win/icon.ico"
   },
   "linux": {
-    "target": "deb"
+    "target": ["deb"],
+    "maintainer": "Jonatan Flores",
+    "category": "Utility",
+    "icon": "assets/icons/png/256x256.png"
   },
   "mac": {
     "category": "your.app.category.type"
