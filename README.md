@@ -34,8 +34,19 @@ $ npm start
 
 To make the application installers, use the following commands according to target Operating System (OS)
 
+> **FOR WINDOWS BUILD**
+> USE Windows 10 or Greater and don't forget to install the `windows-build-tools` package by `running as administrator` the following command on `PowerShell`:
+
 ```bash
-$ npm run build:win
-$ npm run build:mac
-$ npm run build:lin
+$ npm i -g --production windows-build-tools
+```
+
+Now you can generate the application "installers"
+
+> **FOR WINDOWS BUILD**
+> Run the following command USING Windows 10 `PowerShell` running as Administrator:
+
+```bash
+$ npm run pack
+$ npm run dist
 ```

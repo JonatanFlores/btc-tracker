@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir --config electron-builder.json",
-    "dist": "electron-builder --config electron-builder.json"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "Jonatan Flores",
@@ -18,5 +18,36 @@
   "dependencies": {
     "axios": "^0.19.0",
     "electron-squirrel-startup": "^1.0.0"
+  },
+  "build": {
+    "appId": "br.com.btctracker",
+    "productName": "BTC Tracker",
+    "win": {
+      "icon": "./assets/icons/win/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "./assets/icons/win/icon.ico",
+      "uninstallerIcon": "./assets/icons/win/icon.ico",
+      "installerHeader": "./assets/icons/win/icon.ico"
+    },
+    "linux": {
+      "target": ["deb"],
+      "maintainer": "Jonatan Flores",
+      "category": "Utility",
+      "icon": "assets/icons/png/256x256.png"
+    },
+    "mac": {
+      "category": "your.app.category.type"
+    }
   }
 }
